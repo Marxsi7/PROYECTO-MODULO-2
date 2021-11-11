@@ -1,0 +1,331 @@
+body{
+  background-color: #090909;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body, h1{/*Evitar espacios vacios encima o debajo del <header>*/
+  margin: 0
+}
+
+.logo h1{
+  color: white;
+  font-family: 'Actor';
+}
+
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: #010101;
+  box-shadow: 0 4px 25px -22px black;
+  z-index: 2;
+}
+
+/*Crear clases con nombres como sus propiedades y valores, para familiarizarnos luego con la metodología de bootstrap*/
+
+.display-flex{/*Mostrar los elementos hijos de manera inline por más que sean block. Sin quiebre, por lo que excederá container-width o vw*/
+  display: flex;
+}
+.just-cont{
+  justify-content: space-around;
+}
+
+.just-cont-cent{
+  justify-content: center;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.display-flex-wrap{/*Para aquello que no queremos que exceda el vw o container-width*/
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.col{/*por si fuera necesario utilizar display: flex con flow column*/
+  flex-direction: column;
+}
+
+#movies, #series{/*Evitar problemas en el grid, como un row-gap demasiado grande*/
+  height: fit-content;
+}
+
+.afiche{ /*Estilizar los aside/div que contienen las imágenes y la breve descripción*/
+  max-width: 170px; 
+  height: 250px; 
+  overflow: hidden; 
+  margin-bottom: 15px;
+  background-color: #222;
+}
+.afiche img{/*Hacer que la imágen cubra el 100% del afiche, y evitar distorsión con object-fit*/
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+}
+
+.afiche h2{
+  font-family: 'Bebas neue';
+  color: rgb(112, 14, 14);
+  margin: 5px;
+}
+
+.afiche:hover img{/*al hacer :hover desde celular mostrar título y breve descripción*/
+  height: 0%;
+}
+
+.afiche:hover{/*crear un pequeño marco al rededor, para distinguir la seleccion*/
+  outline: 1px solid white;
+}
+
+.afiche p{
+  color: white;
+}
+
+a{
+  text-decoration: none;
+}
+
+h3{
+  font-family: 'Bebas neue';
+  letter-spacing: 2px;
+  color: #ddd;
+  text-shadow: 1px 1px 8px #aaa;
+}
+
+
+.grid{/*En el formato mobile-first, mostrar solo dos afiches*/
+  display: grid;
+  grid-template-columns: auto auto;/*se logra gracias a esta linea, siendo prop.: auto auto; el width de cada col.*/
+}
+
+title{/*Solo queremos este atributo para vista de escritorio*/
+  display: none;
+} 
+
+#navtab{display: none;}
+
+
+input[type="checkbox"]{
+  display: none;
+}
+
+/*Principal: Ruth*/
+
+header{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background:black;
+  box-shadow: 0 4px 25px -22px black;
+  z-index: 2;
+}
+
+.header-content{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.logo{
+  /*height: 80px;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo h1 b{
+  color: rgb(200, 42, 42);
+}
+
+
+/*portada*/
+.container-cover{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 80px;
+  background-image: url(lo.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-cover::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(138, 158, 159, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container-info-cover{
+  max-width: 800px;
+  height: 500px;
+ margin:auto;
+ text-align: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+ z-index: 1;
+}
+.container-info-cover{
+  font-size: 24px;
+  font-weight: 500;
+  color:black;
+  margin-bottom: 20px;
+}
+.logo a{
+  text-decoration: none;
+}
+
+#form-buttons button, #elboton, #form-button, #form-button1{
+  padding: 10px;
+  width:100px;
+  background-color: rgb(165, 42, 42);
+  border: none;
+  margin: 0 3px;
+  color: white;
+  outline:1px solid rgb(200, 42, 42);
+}
+
+#form-buttons button, #elboton{
+  cursor: pointer;
+}
+
+b{
+  font-family: 'Bebas neue';
+}
+
+#menu-icon{
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+
+
+/*Ranking Gime*/
+#recomendado, #recomendado1{
+  overflow-x: scroll;
+}
+
+#recomendado span{
+  margin-right: -20px;
+    -webkit-text-stroke: 2px #aaa;
+    color: black; 
+    font-size: 250px;
+    font-family: 'Bebas neue';
+}
+#recomendado img {
+    width: 200px;
+    height: 300px;
+}
+
+
+#recomendado1 img {
+    width: 200px;
+  height: 300px;
+  margin-right: 5px;
+}
+
+#catalogo body{
+  background-color: #191919;
+}
+
+.ranking{
+  font-family: 'bebas neue';
+  letter-spacing: 3px;
+}
+
+#catalogo3 h3{
+  margin-top: 30px;
+}
+
+#myList img{
+  max-width: 170px;
+  max-height: 250px;
+  margin: 3px 3px;
+}
+
+.menu a{
+  text-decoration: none;
+  font-family: 'Actor';
+  color: white
+}
+
+.menu nav{
+  height: 100%;
+}
+
+.menu nav ul{
+  /*height: 100%;*/
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  justify-content: space-between;
+}
+
+.menu nav ul li{
+  height: 100%;
+  margin: 0% 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*gime*/
+#formulario1 body, #formulario2 body{
+	border-radius:10px;
+	margin:0;
+	background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(https://cdn.pixabay.com/photo/2016/03/07/00/00/cinema-1241422_960_720.jpg);
+  
+}
+#formulario{
+    width: 400px;
+    height: 600px; 
+    background-color: rgba(0, 0, 0,0.8);
+    color: rgb(245, 236, 236);
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+   
+  }
+ 
+#form-button button{
+   width: 200px;
+   padding:10px 20px;
+   background-color: red;
+   color: white;
+   align-items: center;
+   justify-content: center;
+   display:block;
+   border-radius: 0;
+   margin: auto;
+ }
+  
+  
+  #txtUser,#txtPassword,#txtnombre{
+      background-color: grey;
+      border-style:none;
+     border-radius: 5px;  
+     display:block;
+     width: 300px;
+     height: 50px;
+     margin: auto;
+  }
+  
+  div img{
+    color: rgba(0,0,0,0.5);
+  }
+  
