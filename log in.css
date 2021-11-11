@@ -1,0 +1,61 @@
+@media screen and (max-width:1200px) {    
+}
+*{
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+.header-content{
+    max-width: 100px;
+    margin: auto;
+    display: flex;
+    align-content: center;
+  }
+h1.tiptoppelis {
+      font-family: 'Lemonada', cursive;
+      color: rgb(79, 27, 221);
+      text-shadow: floralwhite 2px 2px;
+      font-size: 55px;
+  }
+.fondo{
+    background: rgba(2, 2, 2, 0.5);
+}
+header{
+    background-image:url(https://img.microsiervos.com/Peliculas-Ready-Player-One.jpg);
+    background-size: 100vh;
+    height: 100%; 
+}
+
+/*Formulario de Registro*/
+.contentform{
+    padding: 20vh;
+}
+.formulario{
+    background-color: rgba(0, 0, 0, 0.733);
+    border-radius: 10px ;
+    text-align: center;
+    margin: 0px 0px;
+    padding: 20px 0px 50px;
+}
+input{
+    display: -ms-grid;
+    background-color: rgb(255, 255, 255);
+    border: black 2px solid;
+    color: rgb(0, 0, 0) ;
+    padding: 18px;
+
+}
+
+
+label {
+    color: white;
+}
+.notienecuenta {
+    color: honeydew;
+}
+a{
+    color: rgb(48, 48, 212);
+}
